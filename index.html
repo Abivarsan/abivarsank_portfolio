@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complete Responsive Personal Portfolio Website Using HTML CSS & JavaScript | Codehal</title>
+<!-- boxicons  -->
+ <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+
+ <!-- custom css  -->
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- header -->
+     <header class="active">
+        <a href="#" class="logo">Abivarsan K.</a>
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <nav>
+            <a href="#" class="active">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Resume</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+        </nav>
+     </header>
+
+        <!-- bars background -->
+        <div class="bars-box active">
+            <div class="bar" style="--i:6"></div>
+            <div class="bar" style="--i:5"></div>
+            <div class="bar" style="--i:4"></div>
+            <div class="bar" style="--i:3"></div>
+            <div class="bar" style="--i:2"></div>
+            <div class="bar" style="--i:1"></div>
+        </div>
+
+        <!-- home section  -->
+        <section class="home active">
+            <div class="home-detail">
+              <h1>Abivarsan Ketheeswarn</h1>
+              <h2>I'm a 
+                <span style="--i:4;" data-text="Full Stack Developer">Full Stack Developer</span>
+                <span style="--i:3;" data-text=".NET Developer">.NET Developer</span>
+                <span style="--i:2;" data-text="Active listener">Active listener</span>
+                <span style="--i:1;" data-text="Quick learner">Quick learner</span>
+            </h2>
+              <p>Experience in full-stack development, gained through coursework and a significant software project, using agile methodologies.
+                Motivated to learn and contribute, seeking an internship to enhance technical expertise, collaborate with professionals, and
+                contribute to impactful software solutions.</p>
+                <div class="btn-sci">
+                    <!-- <a href="#" class="btn">Download CV</a> -->
+                    <a href="img/Abivarsan Ketheeswaran_SE.pdf" class="btn" download="Abivarsan_Ketheeswaran_CV.pdf">Download CV</a>
+                    <div class="sci">
+                        <a href="https://github.com/Abivarsan"><i class='bx bxl-github'></i></a>
+                        <a href="https://www.linkedin.com/in/abivarsan/"><i class='bx bxl-linkedin'></i></a>
+                        <a href="https://medium.com/@ketheeswaranabivarsan"><i class='bx bxl-medium' ></i></a>
+                        <a href="https://x.com/AbivarsanK"><i class='bx bxl-twitter' ></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="home-img">
+                <div class="img-box">
+                    <div class="img-item">
+                            <img src="img/Profile.png" alt="">
+                    </div>
+                </div>
+            </div>
+        
+        </section>
+
+        <!-- services section  -->
+         <section class="services ">
+            <h2 class="heading">My<span>Services</span></h2>
+            <div class="services-container">
+                <div class="services-box">
+                    <div class="icon">
+                        <i class='bx bx-code-alt'></i>
+                        <a href="#"><i class='bx bx-arrow-back'></i></a>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>I specialize in web development, leveraging frameworks like React, ASP.NET Core, and Spring Boot, along with languages such as Java, C#, TypeScript, JavaScript, HTML, and CSS to build scalable, responsive, and efficient applications.</p>
+                </div>
+
+                <div class="services-box">
+                    <div class="icon">
+                        <i class='bx bxs-group'  ></i>
+                        <a href="#"><i class='bx bx-arrow-back'></i></a>
+                    </div>
+                    <h3>Group Projects</h3>
+                    <p>I am developing a microservices-based application using React, Spring Boot, Docker, Kafka, and Zookeeper, ensuring scalability and efficiency. The system is designed with independent services for user management, orders, inventory, notifications, and more, leveraging Kafka for real-time messaging and Docker for containerized deployment to enhance performance and reliability.</p>
+                </div>
+
+                <div class="services-box">
+                    <div class="icon">
+                        <i class='bx bxs-user'></i>
+                        <a href="#"><i class='bx bx-arrow-back'></i></a>
+                    </div>
+                    <h3>Indivual Projects</h3>
+                    <p>I specialize in developing individual projects using React, ASP.NET Core, and Spring Boot, creating scalable and efficient applications tailored to specific needs. From frontend UI design to backend logic and database integration, I ensure seamless functionality, performance, and user experience.</p>
+                </div>
+
+                <div class="services-box">
+                    <div class="icon">
+                        <i class='bx bx-microchip'></i>
+                        <a href="#"><i class='bx bx-arrow-back'></i></a>
+                    </div>
+                    <h3>Hardware Projects</h3>
+                    <p>I familar with hardware projects, leveraging my expertise in C, C++, Proteus, Atmel Studio, and Blender to develop efficient embedded systems. I use EasyEDA for PCB design modifications, ensuring optimized circuit layouts. My work includes automation, sensor integration, and mechanical design, combining software and hardware for seamless functionality.</p>
+                </div>
+
+                <div class="services-box">
+                    <div class="icon">
+                        <i class='bx bxs-user-detail' ></i>
+                        <a href="#"><i class='bx bx-arrow-back'></i></a>
+                    </div>
+                    <h3>Portfolios</h3>
+                    <p>I offer custom portfolio development using HTML, CSS, JavaScript, React, Three.js, and Tailwind CSS, creating visually appealing, responsive, and interactive websites. My portfolios feature modern designs, smooth animations, and 3D elements, ensuring a dynamic and engaging user experience tailored to showcase personal or professional achievements effectively.</p>
+                </div>
+
+                <div class="services-box">
+                    <div class="icon">
+                        <i class='bx bxl-figma'></i>
+                        <a href="#"><i class='bx bx-arrow-back'></i></a>
+                    </div>
+                    <h3>Figma designs</h3>
+                    <p>I create modern and user-friendly UI/UX designs using Figma, focusing on clean layouts, intuitive navigation, and responsive design. My designs ensure a seamless user experience, aligning with brand identity and industry standards.</p>
+                </div>
+            </div>
+         </section>
+
+         <!-- resume section -->
+          <section class="resume" >
+            <div class="resume-container">
+                <div class="resume-box">
+                    <h2>Why Hire Me?</h2>
+                    <p class="desc">
+                        A versatile full-stack developer with expertise in React, .NET, and microservices. I excel at problem-solving, writing clean code, and collaborating to build efficient, scalable solutions
+                    </p>
+                    <button class="resume-btn active">Experience</button>
+                    <button class="resume-btn">Education</button>
+                    <button class="resume-btn">Skills</button>
+                    <button class="resume-btn">About Me</button>
+                </div>
+                <div class="resume-box">
+                    <div class="resume-detail experience active">
+                        <h2 class="heading">My<span>Experience</span></h2>
+                        <p class="desc">I have worked on projects like Uni Tutor Platform and TECHHUB (e-commerce system), contributing to admin dashboards, database integration, API gateways, and payment systems using Stripe. My experience includes real-time notifications with Kafka and Firebase, ensuring seamless system interactions.</p>
+                        <div class="resume-list">
+                            <div class="resume-item">
+                                <p class="year">2023 - 2024</p>
+                                <h3>Full Stack Developer</h3>
+                                <p class="company">2nd Year Software Project -University of Moratuwa</p>
+                                <p >I contributed to the Uni Tutor Platform, developing the Admin Dashboard, tutor verification, user management, and platform moderation. I also implemented search, reviews, a coin bank, and chat while analyzing user reports and performance trends.</p>
+                            </div>
+                            <div class="resume-item">
+                                <p class="year">2024 - 2025</p>
+                                <h3>Full Stack Developer</h3>
+                                <p class="company">3rd Year Microservice Project - University Of Moratuwa</p>
+                                <p >I contributed to TECHHUB, an e-commerce platform using microservices, handling testing, database integration, API Gateway setup, and order service development. I also configured Kafka for notifications and integrated Stripe for payments.</p>
+                            </div>
+                            <div class="resume-item">
+                                <p class="year">2024 - present</p>
+                                <h3>Full Stack Developer</h3>
+                                <p class="company">3rd Year Individual Project(Ongoing) - University Of Moratuwa</p>
+                                <p >I am developing a productivity platform with time tracking, task management, video conferencing, and performance analytics, inspired by Asana, Trello, and Slack. It features real-time updates, mobile access, and AI-driven task assignment to enhance team collaboration.</p>
+                            </div>
+                            <div class="resume-item">
+                                <p class="year">2018 - 2019</p>
+                                <h3>Secretary</h3>
+                                <p class="company">Science Union - St. John's College</p>
+                                <p >As the Secretary of the Science Union at St. John’s College, Jaffna (2018), I maintained the logbook, organized meetings, and coordinated preparations for the Science Day event.</p>
+                            </div>
+                            <div class="resume-item">
+                                <p class="year">2018 - 2019</p>
+                                <h3>Secretary</h3>
+                                <p class="company">St.John's Ambulance - St. John's College</p>
+                                <p >As Secretary of St. John’s Ambulance in 2018, I managed the logbook, organized meetings, and coordinated medical support duties for sports meets and events.</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+              
+                    <div class="resume-detail education">
+                        <h2 class="heading">My<span>Education</span></h2>
+                        <p class="desc">Currently pursuing a BSc (Hons) in IT & Management at the University of Moratuwa, I have gained strong technical expertise and hands-on experience in software development.</p>
+                        <div class="resume-list">
+                            <div class="resume-item">
+                                <p class="year">2022 - Present </p>
+                                <h3>Undergraduate</h3>
+                                <p class="company">University of  Moratuwa, Katubedda</p>
+                                <p >I am a third-year undergraduate student, who is Currently pursuing a BSc (Hons) in Information Technology and Management.</p>
+                            </div>
+                            <div class="resume-item">
+                                <p class="year">2011 - 2019</p>
+                                <h3>Student</h3>
+                                <p class="company">St.John's College, Jaffna</p>
+                                <p >I completed my education with specializing in the Physical Science stream for G.C.E. A/L, achieving A in Combined Mathematics, B in Chemistry, and C in Physics. In G.C.E. O/L, I secured six A’s and three B’s.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="resume-detail skills">
+                        <h2 class="heading">My<span>Skills</span></h2>
+                        <p class="desc">I have proficiency in multiple programming languages, frameworks, and tools.</p>
+                        <div class="resume-list">
+                            <div class="resume-item">
+                                <i class='bx bxl-html5'></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="resume-item">
+                                <i class="bx bxl-css3"></i>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="resume-item">
+                                <i class='bx bxl-javascript'></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="resume-item">
+                                <i class='bx bxl-typescript'></i>
+                                <span>TypeSCript</span>
+                            </div>
+                            <div class="resume-item">
+                                <i class='bx bxl-java'></i>
+                                <span>Java</span>
+                            </div>
+                            <div class="resume-item">
+                                <i class='bx bxl-c-sharp'></i>
+                                <span>C#</span>
+                            </div>
+                            <div class="resume-item">
+                                <span>ASP.NET Core</span>
+                            </div>
+                            <div class="resume-item">
+                                <i class='bx bxl-react'></i>
+                                <span>React</span>
+                            </div>
+                            <div class="resume-item">
+                                <i class='bx bxl-spring-boot' ></i>
+                                <span>Spring Boot</span>
+                            </div>
+                            <div class="resume-item">
+                                <i class='bx bxl-firebase' ></i>
+                                <span>Firebase</span>
+                            </div>
+                            <div class="resume-item">
+                                <i class='bx bxl-microsoft'></i>
+                                <span>MSSQL</span>
+                            </div>
+                            <div class="resume-item">
+                                <span>MySQL</span>
+                            </div>
+                            <div class="resume-item">
+                                <i class='bx bxl-git'></i>
+                                <span>Git</span>
+                            </div>
+                            <div class="resume-item">
+                                <i class='bx bxl-docker' ></i>
+                                <span>Docker</span>
+                            </div>
+                            <div class="resume-item">
+                                <span>Postman</span>
+                            </div>
+                            <div class="resume-item">
+                                <i class='bx bxl-visual-studio' ></i>
+                                <span>Visual Studio</span>
+                            </div>
+                            <div class="resume-item">
+                                <span>IntelliJ</span>
+                            </div>
+                            <div class="resume-item">
+                                <i class='bx bxl-visual-studio' ></i>
+                                <span>Visual Studio Code</span>
+                            </div>
+                            <div class="resume-item">
+                                <i class='bx bxl-figma' ></i>
+                                <span>Figma</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="resume-detail about">
+                        <h2 class="heading">About<span>Me</span></h2>
+                        <p class="desc">I’m Abivarsan Ketheeswaran, a passionate software engineer intern skilled in full-stack development. With expertise in React, .NET, and Spring Boot, I thrive on solving challenges, learning new technologies, and building efficient software solutions.</p>
+                        <div class="resume-list">
+                            <div class="resume-item">
+                                <p>Name<span>Abivarsan Ketheeswaran</span></p>
+                            </div>
+                            <div class="resume-item">
+                                <p>Gender<span>Male</span></p>
+                            </div>
+                            <div class="resume-item">
+                                <p>Age<span>24 Years Old</span></p>
+                            </div>
+                            <div class="resume-item">
+                                <p>Status<span>Single</span></p>
+                            </div>
+                            <div class="resume-item">
+                                <p>Country<span>Sri Lanka</span></p>
+                            </div>
+                            <div class="resume-item">
+                                <p>Nationality<span>Srilankan</span></p>
+                            </div>
+                            <div class="resume-item">
+                                <p>Home Town<span>Jaffna</span></p>
+                            </div>
+                            <div class="resume-item">
+                                <p>Current Town<span>Moratuwa</span></p>
+                            </div>
+                            <div class="resume-item">
+                                <p>Full time<span>Available</span></p>
+                            </div>
+                            <div class="resume-item">
+                                <p>Remote work<span>Available</span></p>
+                            </div>
+                            <div class="resume-item">
+                                <p>Part Time<span>Available</span></p>
+                            </div>
+                            <div class="resume-item">
+                                <p>Phone<span>+(94) 76 380 3712</span></p>
+                            </div>
+                            
+                            <div class="resume-item">
+                                <p>Languages<span>English, Tamil</span></p>
+                            </div>
+                            <div class="resume-item">
+                                <p>Email<span>ketheeswaranabivarsan@gmail.com</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            </section>
+        
+        <!-- portfolio section  -->
+         <section class="portfolio">
+            <h2 class="heading">My<span>Projects</span></h2>
+            <div class="portfolio-container">
+                <div class="portfolio-box">
+                    <div class="portfolio-detail active">
+                        <p class="numb">01</p>
+                        <h3>UniTutor - Connecting Platform</h3>
+                        <p>I collaborated on the Uni Tutor Platform, connecting students with lecturers and undergraduates. My contributions include developing the Admin Dashboard, tutor verification, user management (suspension, restoration, and removal), and platform moderation. I also implemented key features like search and filter options, reviews, a coin bank, and chat, while analyzing user reports and visualizing platform performance trends.</p>
+                        <div class="tech">
+                            <P>React.ts, ASP.NET Core, MSSQL, Firebase</P>
+                        </div>
+                        <div class="live-github">
+                            <a href="https://github.com/Abivarsan/.netUniTutor-FrontEnd.git"><i class="bx bxl-github"></i><span>Front-end Repo</span></a>
+                            <a href="https://github.com/Abivarsan/Last-UniTutor-BackEnd.git"><i class="bx bxl-github"></i><span>Back-end Repo</span></a>
+                        </div>
+                    </div>
+                    <div class="portfolio-detail">
+                        <p class="numb">02</p>
+                        <h3>TechHUB -  ECommerce Platform</h3>
+                        <p>I collaborated on TECHHUB, an e-commerce platform built with microservices, including user management, orders, inventory, notifications, and tracking. My contributions included testing services with Postman, integrating databases, setting up the API Gateway, and developing the order service with features like charging, order placement, and tracking. I also configured Kafka for notifications and integrated Stripe for seamless payments.</p>
+                        <div class="tech">
+                            <P>React.ts, Spring Boot, MySQL, Docker, Kafka, Zookeeper, Eureka Server</P>
+                        </div>
+                        <div class="live-github">
+                            <a href="https://github.com/Abivarsan/TechHub_E_Commerce_Platform_FrontEnd.git"><i class="bx bxl-github"></i><span>Front-end Repo</span></a>
+                            <a href="https://github.com/Abivarsan/TechHub_E_Commerce_Platform_BackEnd_Microservices.git"><i class="bx bxl-github"></i><span>Back-end Repo</span></a>
+                        </div>
+                    </div>
+                    <div class="portfolio-detail">
+                        <p class="numb">03</p>
+                        <h3>TaskHIVE - Workforce Mangement System</h3>
+                        <p>I am developing a productivity platform with time tracking, task management, video conferencing, and performance analytics, inspired by Asana, Trello, and Slack. It features real-time updates, mobile access, and AI-driven task assignment to enhance team collaboration.</p>
+                        <div class="tech">
+                            <P>React.ts, ASP.NET Core, MSSQL, Firebase</P>
+                        </div>
+                        <div class="live-github">
+                            <a href="#"><i class="bx bxl-github"></i><span>Front-end Repo</span></a>
+                            <a href="#"><i class="bx bxl-github"></i><span>Back-end Repo</span></a>
+                        </div>
+                    </div>
+                    <div class="portfolio-detail">
+                        <p class="numb">04</p>
+                        <h3>Automated Coffee Machine</h3>
+                        <p>I collaborated on an Automated Coffee Making Machine project, designing a system that prepares and serves tea based on user preferences (strong, medium, plain), enhancing automation and user experience. My contributions included PCB design and developing the cup dispenser mechanism, where I modified a separator wheel using Blender and integrated a belt system for smooth cup delivery.</p>
+                        <div class="tech">
+                            <P>C, blender, Proteus</P>
+                        </div>
+                        <div class="live-github">
+                            <a href="https://github.com/Abivarsan/AutomatedCoffeeMachine-hardwareProject-.git"><i class="bx bxl-github"></i><span>Machine Code</span></a>
+                        </div>
+                    </div>
+                    <div class="portfolio-detail">
+                        <p class="numb">05</p>
+                        <h3>Portfolio</h3>
+                        <p>I developed a personal portfolio website using HTML, CSS, and JavaScript, showcasing my skills, projects, education, and contact details. The site features a clean, responsive design with smooth animations, providing an engaging user experience. </p>
+                        <div class="tech">
+                            <P>HTML5, CSS3, JavaScript</P>
+                        </div>
+                        <div class="live-github">
+                            <a href="#"><i class='bx bx-right-top-arrow-circle' ></i><span>live-github</span></a>
+                            <a href="#"><i class="bx bxl-github"></i><span>github</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-box">
+                     <div class="portfolio-carousel">
+                        <div class="img-slide">
+                            <div class="img-item">
+                                <img src="img/UniTutor.jpeg">
+                            </div>
+                            <div class="img-item">
+                                <img src="img/TechHUB.jpeg">
+                            </div>
+                            <div class="img-item">
+                                <img src="img/TaskHive.jpeg">
+                            </div>
+                            <div class="img-item">
+                                <img src="img/circuit.png">
+                            </div>
+                            <div class="img-item">
+                                <img src="img/portfolio5.jpg">
+                            </div>
+                        </div>
+                     </div>
+                     <div class="navigation">
+                        <button class="arrow-left disabled"><i class="bx bx-chevron-left"></i></button>
+                        <button class="arrow-right"><i class="bx bx-chevron-right"></i></button>
+                     </div>
+
+                </div>
+            </div>
+         </section>
+
+         <!-- contact section -->
+          <section class="contact">
+            <div class="contact-container">
+                <div class="contact-box">
+                    <h2>Let's Work Together</h2>
+                    <p class="desc">I’m always open to new opportunities, collaborations, and exciting projects! Whether you need a dedicated developer for your team or want to discuss an idea, feel free to reach out. Let’s connect and build something amazing together! 🚀</p>
+                    <div class="contact-detail">
+                        <i class='bx bxs-phone'></i>
+                        <div class="detail">
+                            <p>Phone</p>
+                            <p>+(94) 76 380 3712</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class='bx bxs-envelope'></i>
+                        <div class="detail">
+                            <p>Email</p>
+                            <p>ketheeswaranabivarsan@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class='bx bxs-map'></i>
+                        <div class="detail">
+                            <p>Home Address</p>
+                            <p>No.45, Kondalady Road, Nallur, Jaffna, Nothern Province, Srilanka</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-box">
+                    <form action="">
+                        <h2 class="heading">Contact<span>Me!</span></h2>
+                        <div class="field-box">
+                            <input type="text" placeholder="Full name" required>
+                            <input type="text" placeholder="Email Address" required>
+                            <input type="text" placeholder="Phone Number" required>
+                            <input type="text" placeholder="Email Subject" required>
+                            <textarea name="" id=""  placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+          </section>
+
+
+
+
+
+ <!-- custom js  -->
+ <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+
+</html>
