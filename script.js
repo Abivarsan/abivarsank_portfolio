@@ -9,7 +9,6 @@ menuIcon.addEventListener('click', () => {
     navbar.classList.toggle('active');
 });
 
-
 const activePage = () => {
     const header = document.querySelector('header');
     const barsBox = document.querySelector('.bars-box');
@@ -34,7 +33,6 @@ const activePage = () => {
 
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
-
 }
 
 navLinks.forEach((link, idx) => {
@@ -80,8 +78,6 @@ resumeBtns.forEach((btn, idx) => {
     });
 });  
 
-
-
 const arrowRight = document.querySelector('.portfolio-box .navigation .arrow-right');
 const arrowLeft = document.querySelector('.portfolio-box .navigation .arrow-left');
 
@@ -122,7 +118,6 @@ arrowLeft.addEventListener('click', () => {
 
     activePortfolio();
 });
-
 
 // Initialize EmailJS with your public key
 emailjs.init("z40CrSJ1g5HnvpJt8"); // Replace with your EmailJS public key
