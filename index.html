@@ -52,7 +52,6 @@
                 Motivated to learn and contribute, seeking an internship to enhance technical expertise, collaborate with professionals, and
                 contribute to impactful software solutions.</p>
                 <div class="btn-sci">
-                    <!-- <a href="#" class="btn">Download CV</a> -->
                     <a href="img/Abivarsan Ketheeswaran_SE.pdf" class="btn" download="Abivarsan_Ketheeswaran_CV.pdf">Download CV</a>
                     <div class="sci">
                         <a href="https://github.com/Abivarsan"><i class='bx bxl-github'></i></a>
@@ -63,7 +62,7 @@
                 </div>
             </div>
             <div class="home-img">
-                <div class="img-box">
+                <div class="img-box float-animation">
                     <div class="img-item">
                             <img src="img/Profile.png" alt="">
                     </div>
@@ -338,7 +337,7 @@
             </section>
         
         <!-- portfolio section  -->
- <section class="portfolio">
+         <section class="portfolio">
             
             <h2 class="heading">My<span>Projects</span></h2>
             <div class="portfolio-container">
@@ -376,7 +375,7 @@
                         </div>
                         <div class="live-github">
                             <a href="#"><i class="bx bxl-github"></i><span>Front-end Repo</span></a>
-                            <a href="https://github.com/Abivarsan/TASKHIVE_Back_end.git"><i class="bx bxl-github"></i><span>Back-end Repo</span></a>
+                            <a href="#"><i class="bx bxl-github"></i><span>Back-end Repo</span></a>
                         </div>
                     </div>
                     <div class="portfolio-detail">
@@ -398,29 +397,14 @@
                             <P>HTML5, CSS3, JavaScript</P>
                         </div>
                         <div class="live-github">
-                            <a href="https://abivarsan.github.io/abivarsank_portfolio/#"><i class='bx bx-right-top-arrow-circle' ></i><span>live-github</span></a>
-                            <a href="https://github.com/Abivarsan/abivarsank_portfolio.git"><i class="bx bxl-github"></i><span>github</span></a>
+                            <a href="#"><i class='bx bx-right-top-arrow-circle' ></i><span>live-github</span></a>
+                            <a href="#"><i class="bx bxl-github"></i><span>github</span></a>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-box">
                      <div class="portfolio-carousel">
                         <div class="img-slide">
-                            <!-- <div class="img-item">
-                                <img src="img/UniTutor.jpeg">
-                            </div>
-                            <div class="img-item">
-                                <img src="img/TechHUB.jpeg">
-                            </div>
-                            <div class="img-item">
-                                <img src="img/TaskHive.jpeg">
-                            </div>
-                            <div class="img-item">
-                                <img src="img/circuit.png">
-                            </div>
-                            <div class="img-item">
-                                <img src="img/Portfolio.jpeg">
-                            </div> -->
                             <div class="img-item">
                                 <div class="inner-slider">
                                     <img src="img/UniTutor/homePage.png">
@@ -472,9 +456,6 @@
                                     <img src="img/Portfolio/Contact.png">
                                 </div>
                             </div>
-                           
-                            
-                            
                         </div>
                      </div>
                      <div class="navigation">
@@ -485,7 +466,6 @@
                 </div>
             </div>
          </section> 
-
 
          <!-- contact section -->
           <section class="contact">
@@ -516,14 +496,14 @@
                     </div>
                 </div>
                 <div class="contact-box">
-                    <form action="">
+                    <form id="contact-form">
                         <h2 class="heading">Contact<span>Me!</span></h2>
                         <div class="field-box">
-                            <input type="text" placeholder="Full name" required>
-                            <input type="text" placeholder="Email Address" required>
-                            <input type="text" placeholder="Phone Number" required>
-                            <input type="text" placeholder="Email Subject" required>
-                            <textarea name="" id=""  placeholder="Your Message" required></textarea>
+                            <input type="text" id="full-name" placeholder="Full name" required>
+                            <input type="text" id="email" placeholder="Email Address" required>
+                            <input type="text" id="phone" placeholder="Phone Number" required>
+                            <input type="text" id="subject" placeholder="Email Subject" required>
+                            <textarea id="message" placeholder="Your Message" required></textarea>
                         </div>
                         <button type="submit" class="btn">Send Message</button>
                     </form>
@@ -531,14 +511,9 @@
             </div>
           </section>
 
-
-
-
-
  <!-- custom js  -->
  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script src="script.js"></script>
 
 </body>
-
 </html>
