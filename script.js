@@ -96,27 +96,28 @@ const activePortfolio = () => {
 }
 
 arrowRight.addEventListener('click', () => {
-    if(index < 3){
+    const portfolioDetails = document.querySelectorAll('.portfolio-detail');
+    const maxIndex = portfolioDetails.length - 1;
+
+    if (index < maxIndex) {
         index++;
         arrowLeft.classList.remove('disabled');
-    } else {
-        index = 4;
-        arrowRight.classList.add('disabled');
+        if (index === maxIndex) {
+            arrowRight.classList.add('disabled');
+        }
+        activePortfolio();
     }
-
-    activePortfolio();
 });
 
 arrowLeft.addEventListener('click', () => {
-    if(index > 1){
+    if (index > 0) {
         index--;
         arrowRight.classList.remove('disabled');
-    } else {
-        index = 0;
-        arrowLeft.classList.add('disabled');
+        if (index === 0) {
+            arrowLeft.classList.add('disabled');
+        }
+        activePortfolio();
     }
-
-    activePortfolio();
 });
 
 // Initialize EmailJS with your public key
@@ -151,3 +152,27 @@ form.addEventListener('submit', function(event) {
             alert("Oops! Something went wrong, please try again.");
         });
 });
+
+// --- Dynamic Age Calculation ---
+function updateDynamicAge() {
+    const ageSpan = document.getElementById('user-age');
+    if (!ageSpan) return;
+
+    // Reads date of birth from the data-dob attribute on #user-age (format: YYYY-MM-DD)
+    const dobString = ageSpan.getAttribute('data-dob') || "2000-01-01";
+    const dob = new Date(dobString);
+    const today = new Date();
+
+    let age = today.getFullYear() - dob.getFullYear();
+    const monthDiff = today.getMonth() - dob.getMonth();
+
+    // If birthday hasn't occurred yet this year, decrement age by 1
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
+        age--;
+    }
+
+    ageSpan.textContent = `${age} Years Old`;
+}
+
+// Automatically calculate and update age on load
+updateDynamicAge();
