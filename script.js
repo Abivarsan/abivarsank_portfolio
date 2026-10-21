@@ -78,10 +78,126 @@ resumeBtns.forEach((btn, idx) => {
     });
 });  
 
+// --- PORTFOLIO & SCREENSHOT CONTROLLER ---
 const arrowRight = document.querySelector('.portfolio-box .navigation .arrow-right');
 const arrowLeft = document.querySelector('.portfolio-box .navigation .arrow-left');
+const portfolioCarousel = document.querySelector('.portfolio-carousel');
+const innerArrowLeft = document.querySelector('.inner-arrow-left');
+const innerArrowRight = document.querySelector('.inner-arrow-right');
+const counterCurrent = document.querySelector('.carousel-counter .current-slide');
+const counterTotal = document.querySelector('.carousel-counter .total-slides');
 
-let index = 0;
+let index = 0; // Current active project (0 to N-1)
+let slideInterval = null;
+let isHovered = false;
+
+const getImgItems = () => document.querySelectorAll('.portfolio-carousel .img-item');
+const innerSlideIndices = Array.from({ length: 20 }, () => 0);
+
+const getActiveInnerSlider = () => {
+    const items = getImgItems();
+    const currentItem = items[index];
+    return currentItem ? currentItem.querySelector('.inner-slider') : null;
+};
+
+const getActiveImages = () => {
+    const slider = getActiveInnerSlider();
+    return slider ? slider.querySelectorAll('img') : [];
+};
+
+const updateInnerSlideView = (resetTimer = false) => {
+    const slider = getActiveInnerSlider();
+    const images = getActiveImages();
+    const total = images.length;
+
+    if (!slider || total === 0) return;
+
+    // Show/hide inner controls if project has only 1 image
+    if (portfolioCarousel) {
+        if (total <= 1) {
+            portfolioCarousel.classList.add('single-image');
+        } else {
+            portfolioCarousel.classList.remove('single-image');
+        }
+    }
+
+    const currentInner = innerSlideIndices[index] || 0;
+    slider.style.transform = `translateX(-${currentInner * 100}%)`;
+
+    if (counterCurrent && counterTotal) {
+        counterCurrent.textContent = currentInner + 1;
+        counterTotal.textContent = total;
+    }
+
+    if (resetTimer) {
+        restartAutoSlide();
+    }
+};
+
+const nextInnerSlide = () => {
+    const images = getActiveImages();
+    if (images.length <= 1) return;
+    innerSlideIndices[index] = ((innerSlideIndices[index] || 0) + 1) % images.length;
+    updateInnerSlideView();
+};
+
+const prevInnerSlide = () => {
+    const images = getActiveImages();
+    if (images.length <= 1) return;
+    innerSlideIndices[index] = ((innerSlideIndices[index] || 0) - 1 + images.length) % images.length;
+    updateInnerSlideView();
+};
+
+const startAutoSlide = () => {
+    stopAutoSlide();
+    const images = getActiveImages();
+    if (images.length <= 1) return;
+
+    slideInterval = setInterval(() => {
+        if (!isHovered) {
+            nextInnerSlide();
+        }
+    }, 3500);
+};
+
+const stopAutoSlide = () => {
+    if (slideInterval) {
+        clearInterval(slideInterval);
+        slideInterval = null;
+    }
+};
+
+const restartAutoSlide = () => {
+    stopAutoSlide();
+    startAutoSlide();
+};
+
+// Pause on hover
+if (portfolioCarousel) {
+    portfolioCarousel.addEventListener('mouseenter', () => {
+        isHovered = true;
+    });
+    portfolioCarousel.addEventListener('mouseleave', () => {
+        isHovered = false;
+    });
+}
+
+// Inner arrow listeners
+if (innerArrowRight) {
+    innerArrowRight.addEventListener('click', (e) => {
+        e.stopPropagation();
+        nextInnerSlide();
+        restartAutoSlide();
+    });
+}
+
+if (innerArrowLeft) {
+    innerArrowLeft.addEventListener('click', (e) => {
+        e.stopPropagation();
+        prevInnerSlide();
+        restartAutoSlide();
+    });
+}
 
 const activePortfolio = () => {
     const imgSlide = document.querySelector('.portfolio-carousel .img-slide');
@@ -93,7 +209,10 @@ const activePortfolio = () => {
         detail.classList.remove('active');
     });
     portfolioDetails[index].classList.add('active');
-}
+
+    // Update inner slide view and restart timer
+    updateInnerSlideView(true);
+};
 
 arrowRight.addEventListener('click', () => {
     const portfolioDetails = document.querySelectorAll('.portfolio-detail');
@@ -119,6 +238,9 @@ arrowLeft.addEventListener('click', () => {
         activePortfolio();
     }
 });
+
+// Initial inner slide view & auto-slide startup
+updateInnerSlideView(true);
 
 // Initialize EmailJS with your public key
 emailjs.init("z40CrSJ1g5HnvpJt8"); // Replace with your EmailJS public key
@@ -175,4 +297,4 @@ function updateDynamicAge() {
 }
 
 // Automatically calculate and update age on load
-updateDynamicAge();
+updateDynamicAge();
