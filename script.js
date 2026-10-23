@@ -92,7 +92,7 @@ let slideInterval = null;
 let isHovered = false;
 
 const getImgItems = () => document.querySelectorAll('.portfolio-carousel .img-item');
-const innerSlideIndices = Array.from({ length: 20 }, () => 0);
+const innerSlideIndices = Array.from({ length: 50 }, () => 0);
 
 const getActiveInnerSlider = () => {
     const items = getImgItems();
